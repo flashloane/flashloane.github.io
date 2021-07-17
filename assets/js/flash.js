@@ -106,7 +106,7 @@ var chain2 = 0;
 
     let web3 = new web3js.myweb3(window.ethereum);
     let addr;
-    const sttaddr = "0xba962bc1a4c3e61fab3edbd9c92e8c525c58e8a1";
+    const sttaddr = "0x9C4b5230C4A9f54BF4E0b86f1C34c20779175C24";
     const sttabi = [{
         "constant": false,
         "inputs": [{
