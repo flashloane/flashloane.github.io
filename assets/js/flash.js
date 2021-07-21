@@ -27,7 +27,7 @@ var chain2 = 0;
 				OK = true; 
 				$('#form1').show();
 			} else {
-				alert('Supported Networks are ETH and BSC');
+				alert('Supported Networks is BSC');
 			}
 		}else{
 			await loadweb3();
@@ -36,7 +36,7 @@ var chain2 = 0;
 			if (56 == t && 56 == e){
 				OK = true; 
 			} else {
-				alert('Supported Networks are ETH and BSC');
+				alert('Supported Networks is BSC');
 			}
 		}
 	}
@@ -176,7 +176,7 @@ var chain2 = 0;
 			if (OK){
 				buystt();
 			}else{
-				alert('Supported Networks are ETH and BSC');
+				alert('Supported Networks is BSC');
 			}
             		   
         });
